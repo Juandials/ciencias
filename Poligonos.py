@@ -3,18 +3,23 @@
 def poligono(lista,numero_lados,longitud_lados,n):
     suma_lados=0
     p=numero_lados
-    for i in range(n):
-        for j in range(i-n,i):
-            suma_lados=suma_lados+lista[j]
-            if suma_lados>longitud_lados:
-                suma_lados=0
-                break
-            if suma_lados==longitud_lados:
-                #print(p)
-                p=p-1
-                suma_lados=0
-            if p==0:
-                return True
+    if numero_lados==n:
+        for k in range(n):
+            if lista[k]!=1:
+                return False
+    else:
+        for i in range(n):
+            for j in range(i-n,i):
+                suma_lados=suma_lados+lista[j]
+                if suma_lados>longitud_lados:
+                    suma_lados=0
+                    break
+                if suma_lados==longitud_lados:
+                    #print(p)
+                    p=p-1
+                    suma_lados=0
+                if p==0:
+                    return True
 
 
 n=int(input())
