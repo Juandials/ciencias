@@ -10,7 +10,7 @@ def poligono(lista,numero_lados,longitud_lados,n):
         else:
             return True
     else:
-        for i in range(n):
+        for i in range(n):    #ESTO TIENE QUE SER MÁS RÁPIDOOO!!!!!!!!!!!
             for j in range(i-n,i):
                 suma_lados=suma_lados+lista[j]
                 if suma_lados>longitud_lados:
