@@ -15,7 +15,6 @@ def poligono(lista,numero_lados,longitud_lados,n):
                 suma_lados=0
             if p==0:
                 return True
-    return -1
 
 
 n=int(input())
@@ -30,7 +29,7 @@ while n!=0:
                 print(n-i)
                 break
     else:
-        print (poligono(lista,numero_lados,longitud_arco,n))
+        print (-1)
                 
             
     n=int(input())
