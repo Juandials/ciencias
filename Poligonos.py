@@ -4,9 +4,11 @@ def poligono(lista,numero_lados,longitud_lados,n):
     suma_lados=0
     p=numero_lados
     if numero_lados==n:
-        for k in range(n):
-            if lista[k]!=1:
+        for k in range(n-1):
+            if lista[k]!=lista[k+1]:
                 return False
+        else:
+            return True
     else:
         for i in range(n):
             for j in range(i-n,i):
