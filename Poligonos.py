@@ -21,7 +21,7 @@ n=int(input())
 while n!=0:
     lista = list(map(int,input().strip().split()))[:n]
     s=sum(lista)
-    for i in range(n,2,-1):
+    for i in range(min(s//2,n),2,-1):
         if s%i==0:
             numero_lados=i
             longitud_arco=s/i
