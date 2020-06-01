@@ -34,7 +34,7 @@ while n!=0:
             #print("longitud_arco:",longitud_arco)
             if poligono(lista,numero_lados,longitud_arco)==True:
                 print(n-i)
-                n=0
+                #TIENE QUE SALIR DE AQUÍ DESPUÉS DE IMPRIMIIIIIR!!!!!!!!!!!!!!!
             elif i==3:
                 print(-1)
                 
