@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 int main() {
-  int casos=1;
+  int cases=1;
   string cad = "";
   while(cin>>cad){
-    cout<<"Case "<<casos++<<":"<<endl;
+    cout<<"Case "<<cases++<<":"<<endl;
     int n;
     cin>>n;
     for(int q=0;q<n;q++){
@@ -14,14 +14,14 @@ int main() {
       i=min(i,j);
       j=max(aux,j);
       char a=cad[i];
-      bool esElMismo=true;
+      bool Same=true;
       for(int pos=i+1;pos<=j;pos++){
         if(a!=cad[pos]){
-          esElMismo=false;
+          Same=false;
           break;
         }
       }
-      if(esElMismo){
+      if(Same){
         cout<<"Yes"<<endl;
       }else{
         cout<<"No"<<endl;
