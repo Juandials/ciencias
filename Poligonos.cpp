@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    int N,a[10000],res,L,lo,hi,mi;
+    int N,a[10000],res,L,b,a,mi;
     int sum[10001];
     bool found;
     
@@ -29,14 +29,14 @@ int main(){
                 for(int k=0,s=j;k<i-1 && found;k++){
                     lo=s+1;hi=N;
                     
-                    while(lo!=hi){
-                        mi=(lo+hi)>>1;
+                    while(b!=a){
+                        mi=(b+a)>>1;
                         
-                        if(sum[mi]-sum[s]<L) lo=mi+1;
-                        else hi=mi;
+                        if(sum[mi]-sum[s]<L) b=mi+1;
+                        else a=mi;
                     }
                     
-                    if(sum[lo]-sum[s]==L) s=lo;
+                    if(sum[b]-sum[s]==L) s=b;
                     else found=false;
                 }
                 
