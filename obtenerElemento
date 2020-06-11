@@ -1,0 +1,19 @@
+public E obtenerElemento(int posicion){
+        if(posicion>=tamano){
+            return null;
+        }
+        if(posicion==0){
+            return inicio.getElemento();
+        }else{
+            int posicionActual = 0;
+            iterador = new Iterador(inicio);
+            while(iterador.tieneSiguiente()){
+                iterador.siguiente();
+                posicionActual++;
+                if(posicion==posicionActual){
+                    return (E)iterador.getIterable().getElemento();
+                }
+            }
+        }
+        return null;
+    }
